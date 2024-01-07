@@ -37,17 +37,17 @@ export default function Cardio() {
     const handleCardioSubmit = async (event) => {
         event.preventDefault();
 
-        //get token
+        
         const token = loggedIn ? Auth.getToken() : null;
         if (!token) return false;
 
-        // get user id 
+        
         const userId = Auth.getUserId();
 
-        // cardio submit
+        
         if (validateForm(cardioForm)) {
             try {
-                // add userid to cardio form
+                
                 cardioForm.userId = userId;
 
                 const response = await createCardio(cardioForm, token);
@@ -65,7 +65,7 @@ export default function Cardio() {
             }
         }
 
-        // clear form input
+        
         setCardioForm({
             name: "",
             distance: "",
