@@ -39,14 +39,14 @@ export default function Resistance() {
     const handleResistanceSubmit = async (event) => {
         event.preventDefault();
 
-        //get token
+       
         const token = loggedIn ? Auth.getToken() : null;
         if (!token) return false;
 
-        // get user id 
+        
         const userId = Auth.getUserId();
 
-        // resistance submit
+       
         if (validateForm(resistanceForm)) {
             try {
                 // add userid to resistance form
