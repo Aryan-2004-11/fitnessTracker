@@ -49,7 +49,7 @@ export default function Resistance() {
        
         if (validateForm(resistanceForm)) {
             try {
-                // add userid to resistance form
+              
                 resistanceForm.userId = userId;
 
                 const response = await createResistance(resistanceForm, token);
